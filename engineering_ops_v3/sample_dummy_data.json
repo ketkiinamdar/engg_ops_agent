@@ -1,0 +1,527 @@
+{
+  "notice": "SYNTHETIC DEMO DATA ONLY. No real customer, tenant, subscription, ticket, project or operational data.",
+  "azure_monitor": {
+    "application_insights": {
+      "requests": {
+        "status": "success",
+        "source": "ApplicationInsights.requests",
+        "retrieved_at": "2026-11-24T03:51:04.192416+00:00",
+        "row_count": 4,
+        "rows": [
+          {
+            "TimeGenerated": "2026-11-24T03:43:04.192416+00:00",
+            "Name": "POST /api/policies",
+            "AppRoleName": "policy-api",
+            "AppVersion": "2.8.4",
+            "Success": false,
+            "ResultCode": "500",
+            "DurationMs": 4200,
+            "OperationId": "op-9001",
+            "Properties": {
+              "environment": "production"
+            }
+          },
+          {
+            "TimeGenerated": "2026-11-24T03:39:04.192416+00:00",
+            "Name": "GET /api/policies/{id}",
+            "AppRoleName": "policy-api",
+            "AppVersion": "2.8.4",
+            "Success": false,
+            "ResultCode": "503",
+            "DurationMs": 5100,
+            "OperationId": "op-9002",
+            "Properties": {
+              "environment": "production"
+            }
+          },
+          {
+            "TimeGenerated": "2026-11-24T03:26:04.192416+00:00",
+            "Name": "POST /api/policies",
+            "AppRoleName": "policy-api",
+            "AppVersion": "2.8.4",
+            "Success": true,
+            "ResultCode": "200",
+            "DurationMs": 380,
+            "OperationId": "op-9003",
+            "Properties": {
+              "environment": "production"
+            }
+          },
+          {
+            "TimeGenerated": "2026-11-24T03:16:04.192416+00:00",
+            "Name": "GET /health",
+            "AppRoleName": "policy-api",
+            "AppVersion": "2.8.4",
+            "Success": true,
+            "ResultCode": "200",
+            "DurationMs": 42,
+            "OperationId": "op-9004",
+            "Properties": {
+              "environment": "production"
+            }
+          }
+        ]
+      },
+      "exceptions": {
+        "status": "success",
+        "source": "ApplicationInsights.exceptions",
+        "retrieved_at": "2026-11-24T03:51:04.192416+00:00",
+        "row_count": 2,
+        "rows": [
+          {
+            "TimeGenerated": "2026-11-24T03:42:04.192416+00:00",
+            "AppRoleName": "policy-api",
+            "ExceptionType": "SqlException",
+            "ProblemId": "SqlConnectionTimeout",
+            "OuterMessage": "Database connection pool timeout",
+            "OperationId": "op-9001"
+          },
+          {
+            "TimeGenerated": "2026-11-24T03:38:04.192416+00:00",
+            "AppRoleName": "policy-api",
+            "ExceptionType": "HttpRequestException",
+            "ProblemId": "PolicyStoreUnavailable",
+            "OuterMessage": "Policy store returned 503",
+            "OperationId": "op-9002"
+          }
+        ]
+      },
+      "dependencies": {
+        "status": "success",
+        "source": "ApplicationInsights.dependencies",
+        "retrieved_at": "2026-11-24T03:51:04.192416+00:00",
+        "row_count": 3,
+        "rows": [
+          {
+            "TimeGenerated": "2026-11-24T03:42:04.192416+00:00",
+            "AppRoleName": "policy-api",
+            "Name": "PolicyDb",
+            "DependencyType": "SQL",
+            "Target": "policy-sql.database.windows.net",
+            "Success": false,
+            "ResultCode": "-2",
+            "DurationMs": 4000,
+            "OperationId": "op-9001"
+          },
+          {
+            "TimeGenerated": "2026-11-24T03:38:04.192416+00:00",
+            "AppRoleName": "policy-api",
+            "Name": "PolicyDb",
+            "DependencyType": "SQL",
+            "Target": "policy-sql.database.windows.net",
+            "Success": false,
+            "ResultCode": "-2",
+            "DurationMs": 4900,
+            "OperationId": "op-9002"
+          },
+          {
+            "TimeGenerated": "2026-11-24T03:16:04.192416+00:00",
+            "AppRoleName": "policy-api",
+            "Name": "RedisCache",
+            "DependencyType": "Azure Cache",
+            "Target": "policy-cache",
+            "Success": true,
+            "ResultCode": "0",
+            "DurationMs": 12,
+            "OperationId": "op-9004"
+          }
+        ]
+      },
+      "traces": {
+        "status": "success",
+        "source": "ApplicationInsights.traces",
+        "retrieved_at": "2026-11-24T03:51:04.192416+00:00",
+        "row_count": 2,
+        "rows": [
+          {
+            "TimeGenerated": "2026-11-24T03:41:04.192416+00:00",
+            "AppRoleName": "policy-api",
+            "Message": "Retrying database connection",
+            "SeverityLevel": 3,
+            "OperationId": "op-9001"
+          },
+          {
+            "TimeGenerated": "2026-11-24T03:37:04.192416+00:00",
+            "AppRoleName": "policy-api",
+            "Message": "Policy store request failed",
+            "SeverityLevel": 3,
+            "OperationId": "op-9002"
+          }
+        ]
+      }
+    },
+    "exceptions": {
+      "status": "success",
+      "source": "LogAnalyticsExceptions",
+      "retrieved_at": "2026-11-24T03:51:04.192416+00:00",
+      "row_count": 2,
+      "rows": [
+        {
+          "TimeGenerated": "2026-11-24T03:42:04.192416+00:00",
+          "AppRoleName": "policy-api",
+          "ProblemId": "SqlConnectionTimeout",
+          "ExceptionType": "SqlException",
+          "Message": "Database connection pool timeout",
+          "OperationId": "op-9001"
+        },
+        {
+          "TimeGenerated": "2026-11-24T03:38:04.192416+00:00",
+          "AppRoleName": "policy-api",
+          "ProblemId": "PolicyStoreUnavailable",
+          "ExceptionType": "HttpRequestException",
+          "Message": "Policy store returned 503",
+          "OperationId": "op-9002"
+        }
+      ]
+    },
+    "failed_requests": {
+      "status": "success",
+      "source": "LogAnalyticsRequests",
+      "retrieved_at": "2026-11-24T03:51:04.192416+00:00",
+      "row_count": 2,
+      "rows": [
+        {
+          "TimeGenerated": "2026-11-24T03:43:04.192416+00:00",
+          "AppRoleName": "policy-api",
+          "Name": "POST /api/policies",
+          "Url": "https://policy-api.example.invalid/api/policies",
+          "ResultCode": "500",
+          "DurationMs": 4200,
+          "OperationId": "op-9001"
+        },
+        {
+          "TimeGenerated": "2026-11-24T03:39:04.192416+00:00",
+          "AppRoleName": "policy-api",
+          "Name": "GET /api/policies/{id}",
+          "Url": "https://policy-api.example.invalid/api/policies/123",
+          "ResultCode": "503",
+          "DurationMs": 5100,
+          "OperationId": "op-9002"
+        }
+      ]
+    },
+    "failed_dependencies": {
+      "status": "success",
+      "source": "LogAnalyticsDependencies",
+      "retrieved_at": "2026-11-24T03:51:04.192416+00:00",
+      "row_count": 2,
+      "rows": [
+        {
+          "TimeGenerated": "2026-11-24T03:42:04.192416+00:00",
+          "AppRoleName": "policy-api",
+          "Name": "PolicyDb",
+          "Target": "policy-sql.database.windows.net",
+          "DependencyType": "SQL",
+          "ResultCode": "-2",
+          "DurationMs": 4000,
+          "OperationId": "op-9001"
+        },
+        {
+          "TimeGenerated": "2026-11-24T03:38:04.192416+00:00",
+          "AppRoleName": "policy-api",
+          "Name": "PolicyDb",
+          "Target": "policy-sql.database.windows.net",
+          "DependencyType": "SQL",
+          "ResultCode": "-2",
+          "DurationMs": 4900,
+          "OperationId": "op-9002"
+        }
+      ]
+    },
+    "azure_activity": {
+      "status": "success",
+      "source": "AzureActivity",
+      "retrieved_at": "2026-11-24T03:51:04.192416+00:00",
+      "row_count": 2,
+      "rows": [
+        {
+          "TimeGenerated": "2026-11-24T03:33:04.192416+00:00",
+          "OperationNameValue": "Microsoft.Sql/servers/databases/write",
+          "ActivityStatusValue": "Succeeded",
+          "ResourceGroup": "rg-policy-prod",
+          "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-policy-prod/providers/Microsoft.Sql/servers/policy-sql/databases/policydb",
+          "Caller": "platform-automation"
+        },
+        {
+          "TimeGenerated": "2026-11-24T03:01:04.192416+00:00",
+          "OperationNameValue": "Microsoft.Compute/virtualMachines/restart/action",
+          "ActivityStatusValue": "Succeeded",
+          "ResourceGroup": "rg-policy-prod",
+          "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-policy-prod/providers/Microsoft.Compute/virtualMachines/policy-worker-01",
+          "Caller": "ops-operator"
+        }
+      ]
+    }
+  },
+  "azure_devops": {
+    "status": "success",
+    "source": "AZURE_DEVOPS_REST_API",
+    "retrieved_at": "2026-11-24T03:51:04.192416+00:00",
+    "organization": "demo-org",
+    "project": "PolicyPlatform",
+    "lookback_hours": 24,
+    "build_count": 3,
+    "builds": [
+      {
+        "build_id": 8421,
+        "build_number": "20261124.4",
+        "pipeline_name": "policy-api-ci",
+        "status": "completed",
+        "result": "succeeded",
+        "source_branch": "refs/heads/main",
+        "source_version": "a1b2c3d4e5f6",
+        "requested_by": "Synthetic Build User",
+        "start_time": "2026-11-24T02:41:04.192416+00:00",
+        "finish_time": "2026-11-24T02:47:04.192416+00:00",
+        "url": "https://dev.azure.com/demo-org/PolicyPlatform/_build/results?buildId=8421"
+      },
+      {
+        "build_id": 8419,
+        "build_number": "20261124.2",
+        "pipeline_name": "policy-api-ci",
+        "status": "completed",
+        "result": "failed",
+        "source_branch": "refs/heads/feature/db-retry",
+        "source_version": "b2c3d4e5f6a1",
+        "requested_by": "Synthetic Build User",
+        "start_time": "2026-11-24T02:01:04.192416+00:00",
+        "finish_time": "2026-11-24T02:08:04.192416+00:00",
+        "url": "https://dev.azure.com/demo-org/PolicyPlatform/_build/results?buildId=8419"
+      },
+      {
+        "build_id": 8415,
+        "build_number": "20261123.7",
+        "pipeline_name": "policy-worker-ci",
+        "status": "completed",
+        "result": "succeeded",
+        "source_branch": "refs/heads/main",
+        "source_version": "c3d4e5f6a1b2",
+        "requested_by": "Synthetic Build User",
+        "start_time": "2026-11-23T12:51:04.192416+00:00",
+        "finish_time": "2026-11-23T12:57:04.192416+00:00",
+        "url": "https://dev.azure.com/demo-org/PolicyPlatform/_build/results?buildId=8415"
+      }
+    ]
+  },
+  "servicenow": [
+    {
+      "number": "INC1002451",
+      "short_description": "Policy API intermittent database connection timeout",
+      "description": "Production policy-api experienced intermittent SQL connection timeouts and elevated HTTP 5xx responses.",
+      "priority": "2",
+      "state": "Resolved",
+      "assignment_group": "Platform Engineering",
+      "opened_at": "2026-11-24T01:51:04.192416+00:00",
+      "closed_at": "2026-11-24T01:54:04.192416+00:00",
+      "close_code": "Solved (Work Around)",
+      "close_notes": "Temporarily increased connection pool and recycled application instances. Permanent capacity review recommended.",
+      "cmdb_ci": "policy-api",
+      "sys_created_on": "2026-11-24T01:51:04.192416+00:00"
+    },
+    {
+      "number": "INC1002388",
+      "short_description": "Policy database connection pool saturation",
+      "description": "Connection pool reached configured limit during peak policy submissions.",
+      "priority": "2",
+      "state": "Resolved",
+      "assignment_group": "Database Operations",
+      "opened_at": "2026-11-23T23:03:04.192416+00:00",
+      "closed_at": "2026-11-23T23:05:04.192416+00:00",
+      "close_code": "Solved (Permanently)",
+      "close_notes": "Adjusted pool settings after load test and verified connection utilization.",
+      "cmdb_ci": "policy-sql",
+      "sys_created_on": "2026-11-23T23:03:04.192416+00:00"
+    },
+    {
+      "number": "INC1002190",
+      "short_description": "Policy API response latency elevated",
+      "description": "P95 latency exceeded service objective during peak usage.",
+      "priority": "3",
+      "state": "Closed",
+      "assignment_group": "Application Support",
+      "opened_at": "2026-11-23T16:39:04.192416+00:00",
+      "closed_at": "2026-11-23T16:44:04.192416+00:00",
+      "close_code": "Solved (Work Around)",
+      "close_notes": "Restarted affected worker and opened follow-up capacity investigation.",
+      "cmdb_ci": "policy-api",
+      "sys_created_on": "2026-11-23T16:39:04.192416+00:00"
+    }
+  ],
+  "sonarcloud": {
+    "quality_gate": {
+      "projectStatus": {
+        "status": "ERROR",
+        "conditions": [
+          {
+            "metricKey": "new_vulnerabilities",
+            "status": "ERROR",
+            "actualValue": "1",
+            "errorThreshold": "0"
+          },
+          {
+            "metricKey": "new_coverage",
+            "status": "WARN",
+            "actualValue": "71.2",
+            "warningThreshold": "80"
+          }
+        ],
+        "ignoredConditions": false
+      },
+      "projectKey": "demo-policy-api"
+    },
+    "measures": {
+      "component": {
+        "key": "demo-policy-api",
+        "name": "Policy API",
+        "measures": [
+          {
+            "metric": "alert_status",
+            "value": "ERROR"
+          },
+          {
+            "metric": "bugs",
+            "value": "4"
+          },
+          {
+            "metric": "vulnerabilities",
+            "value": "2"
+          },
+          {
+            "metric": "security_hotspots",
+            "value": "5"
+          },
+          {
+            "metric": "code_smells",
+            "value": "38"
+          },
+          {
+            "metric": "coverage",
+            "value": "71.2"
+          },
+          {
+            "metric": "duplicated_lines_density",
+            "value": "3.8"
+          },
+          {
+            "metric": "sqale_index",
+            "value": "540"
+          }
+        ]
+      }
+    },
+    "issues": {
+      "total": 3,
+      "p": 1,
+      "ps": 100,
+      "issues": [
+        {
+          "key": "SYNTH-SEC-001",
+          "rule": "python:S5131",
+          "severity": "CRITICAL",
+          "type": "VULNERABILITY",
+          "component": "demo-policy-api:src/api.py",
+          "message": "Review untrusted input handling in policy submission endpoint.",
+          "status": "OPEN",
+          "creationDate": "2026-11-24T02:21:04.192416+00:00"
+        },
+        {
+          "key": "SYNTH-BUG-002",
+          "rule": "python:S####",
+          "severity": "MAJOR",
+          "type": "BUG",
+          "component": "demo-policy-api:src/db.py",
+          "message": "Potential connection cleanup issue on exception path.",
+          "status": "OPEN",
+          "creationDate": "2026-11-24T00:51:04.192416+00:00"
+        },
+        {
+          "key": "SYNTH-CODE-003",
+          "rule": "python:S####",
+          "severity": "MINOR",
+          "type": "CODE_SMELL",
+          "component": "demo-policy-api:src/utils.py",
+          "message": "Simplify duplicated validation logic.",
+          "status": "OPEN",
+          "creationDate": "2026-11-23T22:51:04.192416+00:00"
+        }
+      ]
+    }
+  },
+  "finops": {
+    "cost": {
+      "status": "success",
+      "source": "AzureCostManagement-MOCK",
+      "retrieved_at": "2026-11-24T03:51:04.192416+00:00",
+      "currency_and_units": [
+        "Cost",
+        "ResourceId",
+        "ResourceGroupName",
+        "ServiceName",
+        "UsageDate"
+      ],
+      "period": {
+        "from": "2026-10-25",
+        "to": "2026-11-24"
+      },
+      "row_count": 4,
+      "rows": [
+        {
+          "Cost": 1840.5,
+          "ResourceId": "/subscriptions/demo/resourceGroups/rg-policy-prod/providers/Microsoft.Sql/servers/policy-sql",
+          "ResourceGroupName": "rg-policy-prod",
+          "ServiceName": "Azure SQL Database",
+          "UsageDate": "2026-11-24"
+        },
+        {
+          "Cost": 1260.0,
+          "ResourceId": "/subscriptions/demo/resourceGroups/rg-policy-prod/providers/Microsoft.Compute/virtualMachines/policy-worker-01",
+          "ResourceGroupName": "rg-policy-prod",
+          "ServiceName": "Virtual Machines",
+          "UsageDate": "2026-11-24"
+        },
+        {
+          "Cost": 640.25,
+          "ResourceId": "/subscriptions/demo/resourceGroups/rg-policy-prod/providers/Microsoft.Storage/storageAccounts/policystorage",
+          "ResourceGroupName": "rg-policy-prod",
+          "ServiceName": "Storage",
+          "UsageDate": "2026-11-24"
+        },
+        {
+          "Cost": 390.75,
+          "ResourceId": "/subscriptions/demo/resourceGroups/rg-shared-prod/providers/Microsoft.Network/applicationGateways/policy-agw",
+          "ResourceGroupName": "rg-shared-prod",
+          "ServiceName": "Application Gateway",
+          "UsageDate": "2026-11-24"
+        }
+      ],
+      "note": "SYNTHETIC DEMO DATA. Currency is illustrative USD; not a real Azure bill."
+    },
+    "budgets": {
+      "status": "success",
+      "source": "AzureBudgets-MOCK",
+      "retrieved_at": "2026-11-24T03:51:04.192416+00:00",
+      "count": 1,
+      "budgets": [
+        {
+          "name": "policy-platform-monthly",
+          "amount": 6000,
+          "time_grain": "Monthly",
+          "time_period": {
+            "startDate": "2026-11-01"
+          },
+          "current_spend": {
+            "amount": 4131.5,
+            "unit": "USD"
+          },
+          "notifications": {
+            "Actual80": {
+              "enabled": true,
+              "threshold": 80
+            }
+          }
+        }
+      ],
+      "note": "SYNTHETIC DEMO DATA. Illustrative USD budget only."
+    }
+  }
+}
